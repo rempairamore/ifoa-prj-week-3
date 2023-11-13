@@ -539,6 +539,27 @@ let halfTree = function(numero) {
 
 */
 
+function tree(numero) {
+  let spazioIniziale = (numero - 1)
+  let spazio = ' '
+  let asteriscoIniziale = 1
+  while(numero) {
+    let riga = ''
+    for(let i = 1; i <= spazioIniziale; i++) {
+      riga += spazio
+    }
+    for(let x = 0; x < asteriscoIniziale; x++){
+      riga += '*'
+    }
+    
+    console.log(riga)
+    numero--
+    asteriscoIniziale = (asteriscoIniziale + 2)
+    spazioIniziale--
+  }
+}
+// tree(10)
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
